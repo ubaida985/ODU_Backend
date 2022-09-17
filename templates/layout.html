@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./css/all.css">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <!---------------- Plotly Library ------------------------->
+    <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
+    <script src="./js/plotly.js"></script>
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="./css/Style.css"> {% endblock %}
+</head>
+
+<body>
+    <nav>
+        <div id="leftDiv">
+            <img src="./assets/other/acharya.png" alt="Acharya Logo">
+        </div>
+        <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+        <div id="mainMenu">
+            <ul>
+                <li class="navLink" id="home" data-text="Home"><a href="index.html">Home</a></li>
+                <ul>
+                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Cvd.html">Datasets</a></li>
+                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Qol.html">Datasets</a></li>
+                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Pref.html">Datasets</a></li>
+                </ul>
+                <ul>
+                    <li class="navLink" id="relation" data-text="Relations"><a href="R_Cvd.html">Relations</a></li>
+                    <li class="navLink" id="relation" data-text="Relations"><a href="R_Qol.html">Relations</a></li>
+                    <li class="navLink" id="relation" data-text="Relations"><a href="D_Pref.html">Relations</a></li>
+                </ul>
+                <li class="navLink" id="Predict" data-text="Try it yourself!"><a href="#contact">Predict</a></li>
+                <li class="navLink" id="footer" data-text="Social Links"><a href="#footers">Social Links</a></li>
+            </ul>
+        </div>
+        <div id="rightDiv">
+            <div id="berger"></div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer id="footers" class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About the Project</h2>
+                <p>The project was built by students of Acharya Institute of Techonlogy, Bangalore under the guidance of Ajith Padyana, HOD Department of CSE.</p>
+            </div>
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Sahil</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Sayak Ghosh</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Ubaid Ahmad</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2019 All rights reserved | made by
+                <a href="https://www.github.com/thesloppyguy" target="_blank">Sahil Mandal</a>, <a href="https://github.com/sayakghosh26" target="_blank">Sayak Ghosh</a> &amp; <a href="https://www.github.com/ubaida985">Ubaid Ahmad</a>
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="./js/Jquery3.4.1.min.js"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="./js/owl.carousel.min.js"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="./js/aos.js"></script>
+
+    <!-- ------------ PLOTLY GRAPHS  ------------------------- -->
+    <script src="./js/plotly/cvd.js"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="./js/navbar.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

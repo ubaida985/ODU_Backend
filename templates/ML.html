@@ -1,0 +1,102 @@
+{% extends "layout.html" %} {% block title %}ML{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block content %}
+<form method="POST">
+    <label for="Age">Age</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="0">18-24</option>
+        <option value="1">25-29</option>
+        <option value="2">30-34</option>
+        <option value="3">35-39</option>
+        <option value="4">40-44</option>
+        <option value="5">45-49</option>
+        <option value="6">50-54</option>
+        <option value="7">55-59</option>
+        <option value="8">60-64</option>
+        <option value="8">65-69</option>
+        <option value="10">70-74</option>
+        <option value="11">75-79</option>
+        <option value="12">80 or older</option>
+    </select><br>
+    <label for="Sex">Sex</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+    </select><br>
+    <label for="BMI">BMI</label>
+    <input type="number"><br>
+    <label for="General Health">General Health</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="0">Excellent</option>
+        <option value="4">Very Good</option>
+        <option value="2">Good</option>
+        <option value="1">Fair</option>
+        <option value="3">Poor</option>
+    </select><br>
+
+    <label for="Physical">Physical 30</label>
+    <input type="number" min="0" max="30" step="1"><br>
+
+    <label for="Mental">Mental 30</label>
+    <input type="number" min="0" max="30" step="1"><br>
+
+    <label for="Sleep Time">Sleep Time</label>
+    <input type="number" min="0" max="24" step="1"><br>
+
+    <label for="Physical Activity">Physical Activity</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br>
+    <label for="Smoking">Smoking</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br>
+    <label for="Alcohol">Alcohol</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br>
+    <label for="Stroke">Stroke</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br>
+    <label for="WalkingDiff">WalkingDiff</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br>
+    <label for="Diabetic">Diabetic</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br>
+    <label for="Asthma">Asthma</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br>
+    <label for="Kidney Problems">Kidney Problems</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br>
+    <label for="Skin Problems">Skin Problems</label>
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br>
+</form>
+{% endblock %}
