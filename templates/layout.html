@@ -10,43 +10,49 @@
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="./css/all.css">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/all.css') }}">
 
     <!-- --------- Owl-Carousel ------------------->
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/owl.theme.default.min.css') }}">
     <!-- ------------ AOS Library ------------------------- -->
     <link rel="stylesheet" href="./css/aos.css">
 
     <!---------------- Plotly Library ------------------------->
     <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
     <script src="./js/plotly.js"></script>
+    <script src="{{ url_for('static', filename='/js/plotly.js') }}"></script>
+
 
     <!-- Custom Style   -->
-    <link rel="stylesheet" href="./css/Style.css"> {% endblock %}
+    <link rel="stylesheet" href="./css/Style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/Style.css') }}"> {% endblock %}
 </head>
 
 <body>
     <nav>
         <div id="leftDiv">
             <img src="./assets/other/acharya.png" alt="Acharya Logo">
+            <img src="{{url_for('static',filename='/images/other/acharya.png')}}" alt="Acharya Logo">
+
         </div>
         <!-- ------------x---------------  Navigation --------------------------x------------------- -->
         <div id="mainMenu">
             <ul>
-                <li class="navLink" id="home" data-text="Home"><a href="index.html">Home</a></li>
+                <li class="navLink" id="home" data-text="Home"><a href="home">Home</a></li>
                 <ul>
-                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Cvd.html">Datasets</a></li>
-                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Qol.html">Datasets</a></li>
-                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Pref.html">Datasets</a></li>
+                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Cvd">CVD</a></li>
+                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Qol">QOL</a></li>
+                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Pref">Performance</a></li>
                 </ul>
                 <ul>
-                    <li class="navLink" id="relation" data-text="Relations"><a href="R_Cvd.html">Relations</a></li>
-                    <li class="navLink" id="relation" data-text="Relations"><a href="R_Qol.html">Relations</a></li>
-                    <li class="navLink" id="relation" data-text="Relations"><a href="D_Pref.html">Relations</a></li>
+                    <li class="navLink" id="relation" data-text="Relations"><a href="R_Cvd">CVD</a></li>
+                    <li class="navLink" id="relation" data-text="Relations"><a href="R_Qol">QOL</a></li>
+                    <li class="navLink" id="relation" data-text="Relations"><a href="D_Pref">Performance</a></li>
                 </ul>
-                <li class="navLink" id="Predict" data-text="Try it yourself!"><a href="#contact">Predict</a></li>
+                <li class="navLink" id="Predict" data-text="Try it yourself!"><a href="ML">Predict</a></li>
                 <li class="navLink" id="footer" data-text="Social Links"><a href="#footers">Social Links</a></li>
             </ul>
         </div>
@@ -110,19 +116,21 @@
 
     <!-- Jquery Library file -->
     <script src="./js/Jquery3.4.1.min.js"></script>
-
+    <script src="{{ url_for('static', filename='/js/Jquery3.4.1.min.js') }}"></script>
     <!-- --------- Owl-Carousel js ------------------->
     <script src="./js/owl.carousel.min.js"></script>
-
+    <script src="{{ url_for('static', filename='/js/owl.carousel.min.js') }}"></script>
     <!-- ------------ AOS js Library  ------------------------- -->
     <script src="./js/aos.js"></script>
-
+    <script src="{{ url_for('static', filename='/js/aos.js') }}"></script>
     <!-- ------------ PLOTLY GRAPHS  ------------------------- -->
     <script src="./js/plotly/cvd.js"></script>
-
+    <script src="{{ url_for('static', filename='/js/cvd.js') }}"></script>
     <!-- Custom Javascript file -->
     <script src="./js/navbar.js"></script>
+    <script src="{{ url_for('static', filename='/js/navbar.js') }}"></script>
     <script src="./js/main.js"></script>
+    <script src="{{ url_for('static', filename='/js/main.js') }}"></script>
 </body>
 
 </html>

@@ -32,7 +32,6 @@ def AI():
         kidney=request.form.get('kidney')
         skin=request.form.get('skin')
         ans=find(bmi,stroke,alcohol,smoke,physical,mental,walk,sex,age,dia,activity,gen,sleep,asthma,kidney,skin)
-        
         return render_template('ML.html',result=ans)
     return render_template('ML.html')
 
