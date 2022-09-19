@@ -1,3 +1,5 @@
+pip install virtual env
+
 virtualenv env
 
 env/Scripts/activate
