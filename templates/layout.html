@@ -34,25 +34,21 @@
 <body>
     <nav>
         <div id="leftDiv">
-            <img src="./assets/other/acharya.png" alt="Acharya Logo">
+           <!-- <img src="./assets/other/acharya.png" alt="Acharya Logo"> -->
             <img src="{{url_for('static',filename='/images/other/acharya.png')}}" alt="Acharya Logo">
 
         </div>
         <!-- ------------x---------------  Navigation --------------------------x------------------- -->
         <div id="mainMenu">
             <ul>
-                <li class="navLink" id="home" data-text="Home"><a href="home">Home</a></li>
-                <ul>
-                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Cvd">CVD</a></li>
-                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Qol">QOL</a></li>
-                    <li class="navLink" id="dataset" data-text="Dataset"><a href="D_Pref">Performance</a></li>
-                </ul>
-                <ul>
-                    <li class="navLink" id="relation" data-text="Relations"><a href="R_Cvd">CVD</a></li>
-                    <li class="navLink" id="relation" data-text="Relations"><a href="R_Qol">QOL</a></li>
-                    <li class="navLink" id="relation" data-text="Relations"><a href="D_Pref">Performance</a></li>
-                </ul>
-                <li class="navLink" id="Predict" data-text="Try it yourself!"><a href="ML">Predict</a></li>
+                <li class="navLink" id="home" data-text="Home"><a href="./layout.html">Home</a></li>
+                    <li class="navLink" id="dataset" data-text="CVD"><a href="./D_Cvd.html">CVD</a></li>
+                    <li class="navLink" id="dataset" data-text="QOL"><a href="D_Qol">QOL</a></li>
+                    <li class="navLink" id="dataset" data-text="Performance"><a href="D_Pref">Performance</a></li>
+                    <li class="navLink" id="relation" data-text="Relations CVD"><a href="R_Cvd">Relations - CVD</a></li>
+                    <li class="navLink" id="relation" data-text="Relations QOL"><a href="R_Qol">Relations - QOL</a></li>
+                    <li class="navLink" id="relation" data-text="Relations Performance"><a href="D_Pref">Relations - Performance</a></li>
+                <li class="navLink" id="Predict" data-text="Predict"><a href="ML">Predict</a></li>
                 <li class="navLink" id="footer" data-text="Social Links"><a href="#footers">Social Links</a></li>
             </ul>
         </div>

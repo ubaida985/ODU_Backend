@@ -11,6 +11,12 @@ def index():
     if request.method == 'POST':
         pass
     return render_template('index.html')
+    
+@app.route('/D_Cvd')
+def index():
+    if request.method == 'POST':
+        pass
+    return render_template('D_Cvd.html')
 
 @app.route('/ML', methods=['POST', 'GET'])
 def AI():
