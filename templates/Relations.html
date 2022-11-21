@@ -1,5 +1,198 @@
 {% extends "layout.html" %}{% block title %} Index{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block content %}
 
-<!-- CONTENT GOES HERE -->
+<section id="contact">
+    <div class="container">
+        <div class="infoContainer" data-aos="fade-right" data-aos-delay="200">
+            <div>
+                <h2>Try it yourself!</h2>
+                <ul class="info">
+                    <li>
+                        <label for="xaxis">X axis:</label>
+
+                        <select onchange="optionSelected(this)" name="xaxis" id="xaxis">
+                            <optgroup label="CVD">
+                                <option value="ldl">LDL</option>
+                                <option value="tobacco">Tobacco</option>
+                                <option value="alcohol">Alcohol</option>
+                                <option value="sbp">SBP</option>
+                                <option value="adiposity">Adiposity</option>
+                                <option value="famhist">Family History</option>
+                                <option value="typea">TypeA</option>
+                                <option value="obesity">Obesity</option>
+                                <option value="age">Age</option>
+                                <option value="chd">CHD</option>
+                            </optgroup>
+                            <optgroup label="Performance">
+                                <option value="sex">Sex</option>
+                                <option value="agep">Age</option>
+                                <option value="address">Address</option>
+                                <option value="famsize">Family Size</option>
+                                <option value="pstatus">Parental Status</option>
+                                <option value="medu">Mother's Education</option>
+                                <option value="fedu">Father's Education</option>
+                                <option value="travelTime">Travel Time</option>
+                                <option value="studyTime">Study Time</option>
+                                <option value="failures">Failures</option>
+                                <option value="schoolsup">Schooling Status</option>
+                                <option value="famsup">Family Status</option>
+                                <option value="paid_x">Paid X</option>
+                                <option value="activities">Activities</option>
+                                <option value="nursery">Nursery</option>
+                                <option value="higher">Higher</option>
+                                <option value="internet">Internet</option>
+                                <option value="romantic">Romantic</option>
+                                <option value="famrel">Family Relationship</option>
+                                <option value="goout">Goes Out</option>
+                                <option value="dalc">D Alcohol</option>
+                                <option value="dalc">W Alcohol</option>
+                                <option value="health">Health</option>
+                                <option value="absences">Absences</option>
+                                <option value="G1_Mat">G1_Mat</option>
+                                <option value="G2_Mat">G2_Mat</option>
+                                <option value="G3_Mat">G3_Mat</option>
+                                <option value="G1_Por">G1_Por</option>
+                                <option value="G2_Poe">G2_Por</option>
+                                <option value="G3_Por">G3_Por</option>
+                                <option value="paid_y">Paid Y</option>      
+                            </optgroup>
+                         
+                            <optgroup label="Quality of Life">
+                                <option value="index">Index</option>
+                                <option value="ageQ">Age</option>
+                                <option value="education">Education</option>
+                                <option value="maritalStatus">Marital Status</option>
+                                <option value="occupation">Occupation</option>
+                                <option value="socioEconomicStatus">Socio Economic Status</option>
+                                <option value="comorbidity">Comorbidity</option>
+                                <option value="tobaccoUse">Tobacco Use</option>
+                                <option value="alcoholUse">Alcohol Use</option>
+                                <option value="qol">Quality of Life</option>
+                            </optgroup>
+                         
+                        </select>
+                    </li>
+                    <li>
+                        <label for="yaxis">Y axis:</label>
+
+                        <select onchange="dynamicChart(this)" name="yaxis" id="yaxis">
+                            <optgroup label="CVD">
+                                <option value="ldl">LDL</option>
+                                <option selected value="tobacco">Tobacco</option>
+                                <option value="alcohol">Alcohol</option>
+                                <option value="sbp">SBP</option>
+                                <option value="adiposity">Adiposity</option>
+                                <option value="famhist">Family History</option>
+                                <option value="typea">TypeA</option>
+                                <option value="obesity">Obesity</option>
+                                <option value="age">Age</option>
+                                <option value="chd">CHD</option>
+                            </optgroup>
+                            <optgroup label="Performance">
+                                <option value="sex">Sex</option>
+                                <option value="agep">Age</option>
+                                <option value="address">Address</option>
+                                <option value="famsize">Family Size</option>
+                                <option value="pstatus">Parental Status</option>
+                                <option value="medu">Mother's Education</option>
+                                <option value="fedu">Father's Education</option>
+                                <option value="travelTime">Travel Time</option>
+                                <option value="studyTime">Study Time</option>
+                                <option value="failures">Failures</option>
+                                <option value="schoolsup">Schooling Status</option>
+                                <option value="famsup">Family Status</option>
+                                <option value="paid_x">Paid X</option>
+                                <option value="activities">Activities</option>
+                                <option value="nursery">Nursery</option>
+                                <option value="higher">Higher</option>
+                                <option value="internet">Internet</option>
+                                <option value="romantic">Romantic</option>
+                                <option value="famrel">Family Relationship</option>
+                                <option value="goout">Goes Out</option>
+                                <option value="dalc">D Alcohol</option>
+                                <option value="dalc">W Alcohol</option>
+                                <option value="health">Health</option>
+                                <option value="absences">Absences</option>
+                                <option value="G1_Mat">G1_Mat</option>
+                                <option value="G2_Mat">G2_Mat</option>
+                                <option value="G3_Mat">G3_Mat</option>
+                                <option value="G1_Por">G1_Por</option>
+                                <option value="G2_Poe">G2_Por</option>
+                                <option value="G3_Por">G3_Por</option>
+                                <option value="paid_y">Paid Y</option>      
+                            </optgroup>
+                         
+                            <optgroup label="Quality of Life">
+                                <option value="index">Index</option>
+                                <option value="ageQ">Age</option>
+                                <option value="education">Education</option>
+                                <option value="maritalStatus">Marital Status</option>
+                                <option value="occupation">Occupation</option>
+                                <option value="socioEconomicStatus">Socio Economic Status</option>
+                                <option value="comorbidity">Comorbidity</option>
+                                <option value="tobaccoUse">Tobacco Use</option>
+                                <option value="alcoholUse">Alcohol Use</option>
+                                <option value="qol">Quality of Life</option>
+                            </optgroup>
+                         
+                        </select>
+                    </li>
+            <!--       
+                    <li>
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span>+91991121212</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>Department of Computer Science, Acharya Institute of Techonlogy, Bangalore, Karnataka
+                            - 560107</span>
+                    </li>
+                -->    
+                </ul>
+            </div>
+            <ul class="sci">
+                <li><a href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a></li>
+                <li><a href="">
+                        <i class="fab fa-twitter"></i>
+                    </a></li>
+                <li><a href="">
+                        <i class="fab fa-instagram"></i>
+                    </a></li>
+                <li><a href="">
+                        <i class="fab fa-youtube"></i>
+                    </a></li>
+            </ul>
+        </div>
+        <div id="formContainer" class="formContainer" data-aos="fade-left" data-aos-delay="200">
+ <!--           <div class="contactForm">
+                <h2>Send A Message</h2>
+                <div class="formBox">
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>Last Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="email" required>
+                        <span>Email Address</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <textarea type="text" required></textarea>
+                        <span>Write your message here...</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <input type="submit" value="Send">
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+</section>
+
 
 {% endblock %}
