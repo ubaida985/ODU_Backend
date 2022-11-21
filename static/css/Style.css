@@ -22,6 +22,7 @@ body {
     /* gradient color   */
     --sky: linear-gradient(120deg, rgb(161, 196, 253) 0%, rgb(194, 233, 251) 100%);
     --greenday: linear-gradient(120deg, rgb(71, 130, 136) 0%, rgb(89, 143, 119) 100%);
+    --greenery: linear-gradient(120deg, #104f55 0%, #00383d 100%);
 
     /*      theme font-family   */
     --Abel: 'Abel', cursive;
@@ -276,7 +277,7 @@ nav {
     background-color: var(--white);
 }
 
-main {
+{
     margin-bottom: 3rem;
 }
 
@@ -377,7 +378,7 @@ main {
 /* -------x------- navbar ---------x------- */
 
 
-/* ----------------- Main Content----------- */
+/* ----------------- Content----------- */
 
 /* --------------- Site title ---------------- */
 .site-title {
@@ -494,23 +495,22 @@ section .container .owl-nav {
 
 /* ---------------- Site Content ----------------*/
 
-main .site-content {
+.site-content {
     display: grid;
     grid-template-columns: 70% 30%;
 }
 
-main .post-content {
+.post-content {
     width: 100%;
-
 }
 
-main .site-content .post-content>.post-image,
+.site-content .post-content>.post-image,
 .post-title {
     padding: 3rem 1rem;
     position: relative;
 }
 
-main .site-content .post-content>.post-image .post-info {
+.site-content .post-content>.post-image .post-info {
     background: var(--greenday);
     padding: 1rem;
     position: absolute;
@@ -519,24 +519,27 @@ main .site-content .post-content>.post-image .post-info {
     border-radius: 3rem;
 }
 
-main .site-content .post-content>.post-image>div {
+.site-content .post-content>.post-image>div {
     overflow: hidden;
 }
 
-main .site-content .post-content>.post-image .img {
-    width: 100%;
+.site-content .post-content>.post-image .img {
+    width: 70%;
+    transform: scale(0.8);
     transition: all 1s ease;
 }
 
-main .site-content .post-content>.post-image .img:hover {
-    transform: scale(1.3);
+
+.site-content .post-content>.post-image .img:hover {
+    width: 60%;
+    transform: scale(1);
 }
 
-main .site-content .post-content>.post-image .post-info span {
+.site-content .post-content>.post-image .post-info span {
     margin: 0 .5rem;
 }
 
-main .post-content .post-title a {
+.post-content .post-title a {
     font-family: var(--Anton);
     font-size: 1.5rem;
 }
@@ -569,7 +572,11 @@ main .post-content .post-title a {
 
 
 /* --------------- Sidebar ----------------------- */
-
+.site-content>.sidebar{
+    right: 12rem;
+    top: 10rem;
+    position: fixed;
+}
 .site-content>.sidebar .category-list {
     font-family: var(--Livvic);
 }
@@ -579,7 +586,7 @@ main .post-content .post-title a {
     padding: .4rem 1rem;
     margin: .8rem 0;
     border-radius: 3rem;
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -645,7 +652,7 @@ main .post-content .post-title a {
 
 /* -------x------- Sidebar -----------x----------- */
 
-/* ---------x------- Main Content -----x----- */
+/* ---------x------- Content -----x----- */
 
 /* Contact us */
 #contact {
@@ -1049,7 +1056,7 @@ footer.footer .move-up span:hover {
         display: initial;
     }
 
-    main .site-content {
+    .site-content {
         grid-template-columns: 100%;
     }
 
@@ -1066,7 +1073,7 @@ footer.footer .move-up span:hover {
 /*              Viewport less then or equal to 520px            */
 
 @media only screen and (max-width: 520px) {
-    main .blog {
+    .blog {
         height: 125vh;
     }
 
