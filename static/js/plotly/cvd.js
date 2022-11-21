@@ -1,6 +1,6 @@
-const csvFileCVD = "../../datasets/CVD/CVD_DA.csv"
-const csvFilePerformance = "../../datasets/Performance/sp3.csv"
-const csvFileQOL = "../../datasets/QoL/QoL2.csv"
+const csvFileCVD = "../../static/datasets/CVD/CVD_DA.csv"
+const csvFilePerformance = "../../static/datasets/Performance/sp3.csv"
+const csvFileQOL = "../../static/datasets/QoL/QoL2.csv"
 const graphOne = document.getElementById("graphOne");
 const graphTwo = document.getElementById("graphTwo");
 const graphThree = document.getElementById("graphThree");
@@ -341,7 +341,7 @@ function getDataCVD(){
                 return e.split(",");
             }
         )
-        console.log(result.length);
+        console.log(result);
         processDataCVD(result)
         plotFromCSV();
     })
@@ -374,8 +374,8 @@ function getDataPerformance(){
             e => {
                 return e.split(",");
             }
-        )
-        console.log(result.length);
+        )        
+        console.log(result);
         processDataPerformance(result)
         plotFromCSV();
     })
@@ -432,7 +432,7 @@ function getDataQOL(){
                 return e.split(",");
             }
         )
-        console.log(result.length);
+        console.log(result);
         processDataQOL(result)
         plotFromCSV();
     })

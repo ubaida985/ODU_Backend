@@ -9,25 +9,20 @@
     <title>{% block title %}{% endblock %}</title>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/all.css') }}">
 
     <!-- --------- Owl-Carousel ------------------->
-    <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/owl.theme.default.min.css') }}">
     <!-- ------------ AOS Library ------------------------- -->
-    <link rel="stylesheet" href="./css/aos.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/aos.css') }}">
 
     <!---------------- Plotly Library ------------------------->
     <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
-    <script src="./js/plotly.js"></script>
     <script src="{{ url_for('static', filename='/js/plotly.js') }}"></script>
 
 
     <!-- Custom Style   -->
-    <link rel="stylesheet" href="./css/Style.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='./css/Style.css') }}"> {% endblock %}
 </head>
 
@@ -112,21 +107,15 @@
     <!-- -------------x------------- FOOTER --------------------x------------------- -->
 
     <!-- Jquery Library file -->
-    <script src="./js/Jquery3.4.1.min.js"></script>
     <script src="{{ url_for('static', filename='/js/Jquery3.4.1.min.js') }}"></script>
     <!-- --------- Owl-Carousel js ------------------->
-    <script src="./js/owl.carousel.min.js"></script>
     <script src="{{ url_for('static', filename='/js/owl.carousel.min.js') }}"></script>
     <!-- ------------ AOS js Library  ------------------------- -->
-    <script src="./js/aos.js"></script>
     <script src="{{ url_for('static', filename='/js/aos.js') }}"></script>
     <!-- ------------ PLOTLY GRAPHS  ------------------------- -->
-    <script src="./js/plotly/cvd.js"></script>
-    <script src="{{ url_for('static', filename='/js/cvd.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/plotly/cvd.js') }}"></script>
     <!-- Custom Javascript file -->
-    <script src="./js/navbar.js"></script>
     <script src="{{ url_for('static', filename='/js/navbar.js') }}"></script>
-    <script src="./js/main.js"></script>
     <script src="{{ url_for('static', filename='/js/main.js') }}"></script>
 
 </body>
