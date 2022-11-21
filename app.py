@@ -40,7 +40,7 @@ def relationsQuality():
     return render_template('/relations/performance.html')
 
 @app.route('/datasets')
-def index():
+def datasets():
     if request.method == 'POST':
         pass
     return render_template('datasets.html')
@@ -63,7 +63,7 @@ def datasetsPerformance():
 def datasetsQuality():
     if request.method == 'POST':
         pass
-    return render_template('/datasets/performance.html')
+    return render_template('/datasets/quality.html')
 
 
 

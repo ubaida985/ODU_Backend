@@ -380,40 +380,40 @@ main {
 /* ----------------- Main Content----------- */
 
 /* --------------- Site title ---------------- */
-main .site-title {
-    background: url('../assets/other/Background-image.png');
+.site-title {
+    background: url('../images/other/Background-image.png');
     background-size: cover;
     height: 110vh;
     display: flex;
     justify-content: center;
 }
 
-main .site-title .site-background {
+.site-title .site-background {
     padding-top: 10rem;
     text-align: center;
     color: var(--white);
 }
 
-main .site-title h1,
+.site-title h1,
 h3 {
     margin: .3rem;
 }
 
-main .site-title h1 {
+.site-title h1 {
     font-size: 5rem;
 }
 
-main .site-title h3 {
+.site-title h3 {
     font-size: 2.5rem;
     opacity: 0.8;
 }
 
-main .site-title .btn {
+.site-title .btn {
     margin: 1.8rem;
     background: var(--greenday);
 }
 
-main .site-title .btn:hover {
+.site-title .btn:hover {
     background: transparent;
     border: 1px solid var(--white);
     color: var(--white);
@@ -423,7 +423,7 @@ main .site-title .btn:hover {
 
 /* --------------- Blog Carousel ------------ */
 
-main .blog {
+.blog {
     background: url('../assets/Abract01.png');
     background-repeat: no-repeat;
     background-position: right;
@@ -433,15 +433,15 @@ main .blog {
 
 }
 
-main .blog .blog-post {
+.blog .blog-post {
     padding-top: 6rem;
 }
 
-main .blog .blog-post img {
+.blog .blog-post img {
     height: 200px;
 }
 
-main .blog-post .blog-content {
+.blog-post .blog-content {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -451,17 +451,17 @@ main .blog-post .blog-content {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
 
-main .blog-content .blog-title {
+.blog-content .blog-title {
     padding: 2rem 0;
 }
 
-main .blog-content .btn-blog {
+.blog-content .btn-blog {
     padding: .7rem 2rem;
     background: var(--greenday);
     margin: .5rem;
 }
 
-main .blog-content span {
+.blog-content span {
     display: block;
 }
 
@@ -930,6 +930,89 @@ footer.footer .move-up span:hover {
 }
 
 /* ---------x------- Footer ----------x---------- */
+
+
+/* ---------x------- MACHINE LEARNING STYLING ----------x---------- */
+.ml {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--midnight);
+    position: relative;
+}
+.ml .details {
+}
+.ml .details form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+.ml .details .field{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.ml .details .submit{
+    width: 200%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+}
+.ml .details .submit input{
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    border: none;
+    border-radius: 2rem;
+    padding: 0rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+.ml .details .submit input:hover{
+    background-color: var(--midnightDark);
+    color: var(--white);
+}
+.ml .details input{
+    width: 20rem;
+    height: 2.4rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.ml .details select{
+    width: 20.5rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    outline: none;
+    font-family: var(--Livvic);
+    border: none;
+}
+.ml .details label{
+    width: 10rem;
+    height: 2rem;
+    border-radius: 5px;
+    outline: none;
+    font-family: var(--Livvic);
+    border: none;
+}
+.ml .prediction{
+    margin-top: 1rem;
+    color: white;
+}
+.ml .prediction{
+    list-style-type: none;
+}
+/* ---------x------- MACHINE LEARNING STYLING ----------x---------- */
 
 /*              Viewport less then or equal to 1130px            */
 

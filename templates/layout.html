@@ -28,27 +28,28 @@
 
     <!-- Custom Style   -->
     <link rel="stylesheet" href="./css/Style.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='/css/Style.css') }}"> {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/Style.css') }}"> {% endblock %}
 </head>
 
 <body>
+    <!-- -------------x------------- NAVBAR --------------------x------------------- -->
     <nav>
         <div id="leftDiv">
            <!-- <img src="./assets/other/acharya.png" alt="Acharya Logo"> -->
-            <img src="{{url_for('static',filename='/images/other/acharya.png')}}" alt="Acharya Logo">
+            <img src="{{url_for('static',filename='/images/other/logo.svg')}}" alt="Acharya Logo">
 
         </div>
         <!-- ------------x---------------  Navigation --------------------------x------------------- -->
         <div id="mainMenu">
             <ul>
-                <li class="navLink" id="home" data-text="Home"><a href="./layout.html">Home</a></li>
-                    <li class="navLink" id="dataset" data-text="CVD"><a href="./D_Cvd.html">CVD</a></li>
-                    <li class="navLink" id="dataset" data-text="QOL"><a href="D_Qol">QOL</a></li>
-                    <li class="navLink" id="dataset" data-text="Performance"><a href="D_Pref">Performance</a></li>
-                    <li class="navLink" id="relation" data-text="Relations CVD"><a href="R_Cvd">Relations - CVD</a></li>
-                    <li class="navLink" id="relation" data-text="Relations QOL"><a href="R_Qol">Relations - QOL</a></li>
-                    <li class="navLink" id="relation" data-text="Relations Performance"><a href="D_Pref">Relations - Performance</a></li>
-                <li class="navLink" id="Predict" data-text="Predict"><a href="ML">Predict</a></li>
+                <li class="navLink" id="home" data-text="Home"><a href="./home">Home</a></li>
+                    <li class="navLink" id="dataset" data-text="CVD"><a href="./datasets/cardiovascular">CVD</a></li>
+                    <li class="navLink" id="dataset" data-text="QOL"><a href="./datasets/quality">QOL</a></li>
+                    <li class="navLink" id="dataset" data-text="Performance"><a href="./datasets/performance">Performance</a></li>
+                    <li class="navLink" id="relation" data-text="Relations CVD"><a href="./relations/cardiovascular">Relations - CVD</a></li>
+                    <li class="navLink" id="relation" data-text="Relations QOL"><a href="./relations/quality">Relations - QOL</a></li>
+                    <li class="navLink" id="relation" data-text="Relations Performance"><a href="./relations/performance">Relations - Performance</a></li>
+                <li class="navLink" id="Predict" data-text="Predict"><a href="./ML">Predict</a></li>
                 <li class="navLink" id="footer" data-text="Social Links"><a href="#footers">Social Links</a></li>
             </ul>
         </div>
@@ -56,10 +57,11 @@
             <div id="berger"></div>
         </div>
     </nav>
+    <!-- -------------x------------- NAVBAR --------------------x------------------- -->
 
     {% block content %} {% endblock %}
-    <!-- --------------------------- Footer ---------------------------------------- -->
-
+    
+    <!-- --------------------------- FOOTER ---------------------------------------- -->
     <footer id="footers" class="footer">
         <div class="container">
             <div class="about-us" data-aos="fade-right" data-aos-delay="200">
@@ -107,8 +109,7 @@
             <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
         </div>
     </footer>
-
-    <!-- -------------x------------- Footer --------------------x------------------- -->
+    <!-- -------------x------------- FOOTER --------------------x------------------- -->
 
     <!-- Jquery Library file -->
     <script src="./js/Jquery3.4.1.min.js"></script>

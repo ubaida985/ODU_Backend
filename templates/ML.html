@@ -1,106 +1,159 @@
 {% extends "layout.html" %} {% block title %}ML{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block content %}
-<form method="POST">
-    <label for="Age">Age</label>
-    <select name="age" id="age">
-        <option value="">Select</option>
-        <option value="0">18-24</option>
-        <option value="1">25-29</option>
-        <option value="2">30-34</option>
-        <option value="3">35-39</option>
-        <option value="4">40-44</option>
-        <option value="5">45-49</option>
-        <option value="6">50-54</option>
-        <option value="7">55-59</option>
-        <option value="8">60-64</option>
-        <option value="9">65-69</option>
-        <option value="10">70-74</option>
-        <option value="11">75-79</option>
-        <option value="12">80 or older</option>
-    </select><br>
-    <label for="Sex">Sex</label>
-    <select name="sex" id="sex">
-        <option value="">Select</option>
-        <option value="1">Male</option>
-        <option value="0">Female</option>
-    </select><br>
-    <label for="BMI">BMI</label>
-    <input type="number" name="bmi"><br>
-    <label for="General Health">General Health</label>
-    <select name="gen" id="gen">
-        <option value="">Select</option>
-        <option value="0">Excellent</option>
-        <option value="4">Very Good</option>
-        <option value="2">Good</option>
-        <option value="1">Fair</option>
-        <option value="3">Poor</option>
-    </select><br>
+<section class="ml">
 
-    <label for="Physical">Physical 30</label>
-    <input type="number" min="0" max="30" step="1" name="physical"><br>
+  <div class="details">
+    <form method="POST">
 
-    <label for="Mental">Mental 30</label>
-    <input type="number" min="0" max="30" step="1" name="mental"><br>
+        <div class="field">
+            <label for="Age">Age</label>
+            <select name="age" id="age">
+                <option value="">Select</option>
+                <option value="0">18-24</option>
+                <option value="1">25-29</option>
+                <option value="2">30-34</option>
+                <option value="3">35-39</option>
+                <option value="4">40-44</option>
+                <option value="5">45-49</option>
+                <option value="6">50-54</option>
+                <option value="7">55-59</option>
+                <option value="8">60-64</option>
+                <option value="9">65-69</option>
+                <option value="10">70-74</option>
+                <option value="11">75-79</option>
+                <option value="12">80 or older</option>
+            </select>
+        </div>
 
-    <label for="Sleep Time">Sleep Time</label>
-    <input type="number" min="0" max="24" step="1" name="sleep"><br>
+       <div class="field"> 
+            <label for="Sex">Sex</label>
+            <select name="sex" id="sex">
+                <option value="">Select</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+        </div>
 
-    <label for="Physical Activity">Physical Activity</label>
-    <select name="activity" id="activity">
-        <option value="">Select</option>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-    </select><br>
-    <label for="Smoking">Smoking</label>
-    <select name="smoke" id="smoke">
-        <option value="">Select</option>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-    </select><br>
-    <label for="Alcohol">Alcohol</label>
-    <select name="alcohol" id="alcohol">
-        <option value="">Select</option>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-    </select><br>
-    <label for="Stroke">Stroke</label>
-    <select name="stroke" id="stroke">
-        <option value="">Select</option>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-    </select><br>
-    <label for="WalkingDiff">WalkingDiff</label>
-    <select name="walk" id="walk">
-        <option value="">Select</option>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-    </select><br>
-    <label for="Diabetic">Diabetic</label>
-    <select name="dia" id="dia">
-        <option value="">Select</option>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-    </select><br>
-    <label for="Asthma">Asthma</label>
-    <select name="asthma" id="asthma">
-        <option value="">Select</option>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-    </select><br>
-    <label for="Kidney Problems">Kidney Problems</label>
-    <select name="kidney" id="kidney">
-        <option value="">Select</option>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-    </select><br>
-    <label for="Skin Problems">Skin Problems</label>
-    <select name="skin" id="skin">
-        <option value="">Select</option>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-    </select><br>
-    <input type="submit">
-</form>
-<div>
-    <li id="result"> Result : {{result}} </li>
-</div>
+        <div class="field">
+            <label for="BMI">BMI</label>
+            <input type="number" name="bmi">
+        </div>
+
+       <div class="field">
+            <label for="General Health">General Health</label>
+            <select name="gen" id="gen">
+                <option value="">Select</option>
+                <option value="0">Excellent</option>
+                <option value="4">Very Good</option>
+                <option value="2">Good</option>
+                <option value="1">Fair</option>
+                <option value="3">Poor</option>
+            </select>
+       </div>
+
+        <div class="field">
+            <label for="Physical">Physical 30</label>
+            <input type="number" min="0" max="30" step="1" name="physical">
+        </div>
+
+        <div class="field">
+            <label for="Mental">Mental 30</label>
+            <input type="number" min="0" max="30" step="1" name="mental">
+        </div>
+        
+       <div class="field">
+            <label for="Sleep Time">Sleep Time</label>
+            <input type="number" min="0" max="24" step="1" name="sleep">
+       </div>
+
+       <div class="field">
+            <label for="Physical Activity">Physical Activity</label>
+            <select name="activity" id="activity">
+                <option value="">Select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+       </div>
+
+       <div class="field">
+            <label for="Smoking">Smoking</label>
+            <select name="smoke" id="smoke">
+                <option value="">Select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+       </div>
+
+        <div class="field">
+            <label for="Alcohol">Alcohol</label>
+            <select name="alcohol" id="alcohol">
+                <option value="">Select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="Stroke">Stroke</label>
+            <select name="stroke" id="stroke">
+                <option value="">Select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+        
+        <div class="field">
+            <label for="WalkingDiff">WalkingDiff</label>
+            <select name="walk" id="walk">
+                <option value="">Select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="Diabetic">Diabetic</label>
+            <select name="dia" id="dia">
+                <option value="">Select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+        
+        <div class="field">
+            <label for="Asthma">Asthma</label>
+            <select name="asthma" id="asthma">
+                <option value="">Select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="Kidney Problems">Kidney Problems</label>
+            <select name="kidney" id="kidney">
+                <option value="">Select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="Skin Problems">Skin Problems</label>
+            <select name="skin" id="skin">
+                <option value="">Select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <div class="submit">
+            <input type="submit">
+        </div>
+    </form>
+  </div>
+
+    <div class="prediction">
+        <li id="result"> Result : {{result}} </li>
+    </div>
+</section>
 {% endblock %}
